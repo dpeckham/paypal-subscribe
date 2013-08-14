@@ -64,13 +64,12 @@ module ActionView
             end
           end
 
-          image_source = asset_path(options[:image])
-
           if options[:button]
             html_options = options.fetch(:html, {})
             html_options[:id] = id
             fields << submit_tag(options[:value],html_options) 
           else
+            image_source = asset_path(options[:image])
             fields << image_submit_tag(image_source, 
                            { :alt => options[:alt],
                              :name => "submit",
