@@ -171,7 +171,12 @@ module PaypalSubscribe
   # The currency of the payment. Defaults to "EUR"
   mattr_accessor :currency_code
   @@currency_code = "EUR"
-  
+ 
+  # Character set of the request to PayPal. Defaults to "utf-8"
+  # See https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/formbasics/
+  mattr_accessor :charset
+  @@charset = 'utf-8'
+
   # Extend config options which ever you want. 
   # See 
   # https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/e_howto_html_Appx_websitestandard_htmlvariables

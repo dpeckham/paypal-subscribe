@@ -25,6 +25,7 @@ module ActionView
       #   <input type="hidden" name="custom" value="customcode">
       #   <input type="hidden" name="invoice" value="invoicenumber">
       #   <input type="hidden" name="currency_code" value="EUR" >
+      #   <input type="hidden" name="charset" value="utf-8" >
       #   <input type="image" src="http://images.paypal.com/images/x-click-but01.gif" border="0" name="submit" alt="Make payments with PayPal - it’s fast, free and secure!">
       # </form>
       # 

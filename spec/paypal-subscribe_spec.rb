@@ -39,6 +39,8 @@ describe "PaypalSubscribe" do
     it{should respond_to :paypal_config}
     it{should respond_to :no_shipping}
     it{should respond_to :no_shipping=}
+    it{should respond_to :charset}
+    it{should respond_to :charset=}
     
     context "defining additional_values" do 
 
@@ -74,6 +76,7 @@ describe "PaypalSubscribe" do
       PaypalSubscribe.setup do |config|
         config.business = "my@seller.com"
         config.no_note = true
+        config.charset = 'some-charset'
       end
 
     end
@@ -100,6 +103,10 @@ describe "PaypalSubscribe" do
 
       it "cancel is :paypal_failure" do
         subject[:cancel_return].should eq :paypal_failure
+      end
+
+      specify "charset is 'some-charset'" do
+        subject[:charset].should eq 'some-charset'
       end
 
     end
